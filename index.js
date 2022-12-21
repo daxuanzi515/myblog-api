@@ -14,7 +14,7 @@ dotenv.config()
 
 //use json
 app.use(express.json());
-app.use(cors({ origin: `${process.env.CLIENT_URL}` }));
+app.use(cors({ origin:["http://localhost:3000","https://myblog-client.vercel.app/"] }));
 app.use("/images",express.static(path.join(__dirname,"/images")))
 
 mongoose.set('strictQuery', true);
