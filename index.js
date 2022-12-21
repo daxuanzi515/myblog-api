@@ -18,7 +18,7 @@ app.use(cors({ origin:["https://myblog-client.vercel.app"] }));
 app.use("/images",express.static(path.join(__dirname,"/images")))
 
 mongoose.set('strictQuery', true);
-mongoose.connect(process.env.MONGO_URL,
+mongoose.connect(process.env.MONGO_URI,
 {
     useNewUrlParser: true, useUnifiedTopology: true,
 })
